@@ -1,0 +1,8 @@
+name: Verify valuation studio
+on: [push, pull_request]
+jobs:
+  valuation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node verify.cjs
